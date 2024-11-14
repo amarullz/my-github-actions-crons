@@ -1,0 +1,11 @@
+name: Cron
+on:
+  schedule:
+    - cron: '50 * * * *'
+
+jobs:
+  exec_cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wget
+        run: wget "https://sipoya.amarullz.com/api/cron"
